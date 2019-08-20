@@ -38,7 +38,7 @@ module Api
 
 			private
 			def users_params
-				params.permit(:name, :favorite_anime, :bio)
+				params.permit(:name, :favorite_anime, :bio, :login, :password, :gender, :interest)
 			end
 		end
 	end

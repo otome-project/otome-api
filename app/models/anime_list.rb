@@ -1,0 +1,2 @@
+class AnimeList < ApplicationRecord
+end
