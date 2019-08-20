@@ -4,12 +4,12 @@ module Api
 			
       def index
 				users = Users.order('created_at DESC');
-				render json: {status: 'SUCCESS', message:'Usuários', data:users},status: :ok
+				render json: {status: 'SUCCESS', message:'Users', data:users},status: :ok
 			end
 
 			def show
 				users = Users.find(params[:id])
-				render json: {status: 'SUCCESS', message:'Usuário', data:users},status: :ok
+				render json: {status: 'SUCCESS', message:'User', data:users},status: :ok
 			end
 
 			def create

@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_20_034442) do
-
-  create_table "anime", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.string "name"
-    t.string "cover"
-    t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2019_08_20_041241) do
 
   create_table "anime_lists", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "anime_id"
     t.integer "user_id"
     t.integer "status"
     t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "animes", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name"
+    t.string "cover"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
