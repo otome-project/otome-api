@@ -1,2 +1,0 @@
-class AnimeList < ApplicationRecord
-end
