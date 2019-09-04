@@ -17,7 +17,7 @@ module Api
 				if anime.save
 					render json: {status: 'SUCCESS', message:'Saved anime', data:anime},status: :ok
 				else
-					render json: {status: 'ERROR', message:'Anime not saved', data:anime.erros},status: :unprocessable_entity
+					render json: {status: 'ERROR', message:'Anime not saved', data:anime.errors},status: :unprocessable_entity
 				end
 			end
 
@@ -32,7 +32,7 @@ module Api
 				if anime.update_attributes(anime_params)
 					render json: {status: 'SUCCESS', message:'Updated anime', data:anime},status: :ok
 				else
-					render json: {status: 'ERROR', message:'Anime not update', data:anime.erros},status: :unprocessable_entity
+					render json: {status: 'ERROR', message:'Anime not update', data:anime.errors},status: :unprocessable_entity
 				end
 			end
 

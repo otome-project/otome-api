@@ -17,7 +17,7 @@ module Api
 				if users.save
 					render json: {status: 'SUCCESS', message:'Saved user', data:users},status: :ok
 				else
-					render json: {status: 'ERROR', message:'User not saved', data:users.erros},status: :unprocessable_entity
+					render json: {status: 'ERROR', message:'User not saved', data:users.errors},status: :unprocessable_entity
 				end
 			end
 
@@ -32,7 +32,7 @@ module Api
 				if users.update_attributes(users_params)
 					render json: {status: 'SUCCESS', message:'Updated user', data:users},status: :ok
 				else
-					render json: {status: 'ERROR', message:'User not update', data:users.erros},status: :unprocessable_entity
+					render json: {status: 'ERROR', message:'User not update', data:users.errors},status: :unprocessable_entity
 				end
 			end
 
